@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  resources :students, only: :index
+  # explicit version
+  # get "students", to: "students#index"
+  # get "students/:id", to: "students#show"
+
+  #refactored version
+  resources :students, only: [:index, :show]
 end
